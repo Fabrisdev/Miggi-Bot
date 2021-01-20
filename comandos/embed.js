@@ -1,4 +1,5 @@
 module.exports = (client,msg,args) => {
+    if(!msg.guild) return
     const Discord = require("discord.js")
     const embedDatos = new Discord.MessageEmbed()
                 .setTitle("Este es su título, puede contener 256 caracteres")

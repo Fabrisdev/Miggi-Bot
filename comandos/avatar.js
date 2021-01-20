@@ -1,4 +1,5 @@
 module.exports = (client,msg,args) => {
+    if(!msg.guild) return
     const Discord = require("discord.js")
     const usuario = msg.mentions.users.first()
         if(!usuario){

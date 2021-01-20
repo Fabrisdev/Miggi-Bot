@@ -1,4 +1,5 @@
 module.exports = (client,msg,args) => {
+    if(!msg.guild) return
     let chan = msg.mentions.channels.first()
         if(!chan){
             if(args.length >= 1){

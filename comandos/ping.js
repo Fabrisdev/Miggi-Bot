@@ -1,4 +1,5 @@
 module.exports = (client, msg, args) => {
+    if(!msg.guild) return
     msg.channel.send({embed: {
         color: 16777073,
         description: "Revisando el ping.."
