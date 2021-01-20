@@ -1,4 +1,4 @@
-module.exports = (member) => {
+module.exports = (client, member) => {
     const canal = client.channels.cache.get("801031185588289556")
-    canal.send(`${member.user} ha abandonado el servidor :(`)
+    canal.send(`${member.user.tag} ha abandonado el servidor :(`)
 }
