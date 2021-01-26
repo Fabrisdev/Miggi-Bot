@@ -1,4 +1,5 @@
 module.exports = (client,msg,args) => {
+    if(!msg.guild) return
     const Discord = require("discord.js")
     const db = require("quick.db")
     const canal = client.channels.cache.get("801364238362345482")

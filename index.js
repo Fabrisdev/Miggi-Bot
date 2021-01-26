@@ -44,9 +44,12 @@ for(const file of readdirSync("./eventos/")){
 
 client.login(client.config.token)
     .then(() => {
-        console.log("Miggi ha sido iniciado satisfactoriamente!")
-        console.log(`Actualmente se encuentra conectado en: ${client.guilds.cache.size} servidores`)
+        const timeH = new Date().getHours()
+        const timeM = new Date().getMinutes()
+        const timeS = new Date().getSeconds()
+        console.log(`[${timeH}:${timeM}:${timeS} INFO]: Miggi ha sido iniciado satisfactoriamente!`)
+        console.log(`[${timeH}:${timeM}:${timeS} INFO]: Actualmente se encuentra conectado en: ${client.guilds.cache.size} servidores`)
     })
     .catch((err) => {
-        console.log("Error al iniciar sesión: "+err)
+        console.log(`[${timeH}:${timeM}:${timeS} INFO]: Error al iniciar sesión: ${err}`)
     })
